@@ -107,7 +107,11 @@ else
     UI = loadstring(game:HttpGet(UIRepo .. 'Library.lua'))()
 end
 
-local metadata = loadstring(game:HttpGet(ScriptRepo .. 'metadata.lua'))()
+local metadata = {
+	version = '2.2b v69',
+	updated = '5/14/23',
+	message = 'applied the latest update'
+}
 local httpService = game:GetService('HttpService')
 
 local framework, scrollHandler, network
