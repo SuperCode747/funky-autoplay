@@ -9,8 +9,8 @@ local client = game:GetService('Players').LocalPlayer;
 local set_identity = (type(syn) == 'table' and syn.set_thread_identity) or setidentity or setthreadcontext
 local executor = identifyexecutor and identifyexecutor() or 'Unknown'
 
-local function kick(r) return client:Kick(r) end
-local function fail(r) return client.Kick(string.format("failed, reason: ({%q})",r)) end
+local function fail(r) return client:Kick(r) end
+--local function fail(r) return client.Kick(string.format("failed, reason: ({%q})",r)) end
 
 -- gracefully handle errors when loading external scripts
 -- added a cache to make hot reloading a bit faster
@@ -98,14 +98,14 @@ local IsMobile = false;
 local DevicePlatform = Enum.Platform.None;
 pcall(function() DevicePlatform = UserInputService:GetPlatform(); end);
 IsMobile = (DevicePlatform == Enum.Platform.Android or DevicePlatform == Enum.Platform.IOS);
-local UIRepo = 'https://raw.githubusercontent.com/SuperCode747/funky-friday-autoplay/main/ui-'
+local UIRepo = 'https://raw.githubusercontent.com/SuperCode747/funky-friday-autoplay/main/'
 local ScriptRepo = 'https://raw.githubusercontent.com/SuperCode747/funky-friday-autoplay/main/'
 
 local UI = nil
 if IsMobile then
-    UI = loadstring(game:HttpGet(UIRepo .. 'mobileLibrary.lua'))()
+    UI = loadstring(game:HttpGet(UIRepo .. 'ui-mobileLibrary.lua'))()
 else
-    UI = loadstring(game:HttpGet(UIRepo .. 'library.lua'))()
+    UI = loadstring(game:HttpGet(UIRepo .. 'ui-library.lua'))()
 end
 
 local metadata = {
