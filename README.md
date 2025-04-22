@@ -8,6 +8,6 @@ print(" ")
 print("Wally RBLX's Funky Friday AutoPlay script mobile port. (READ LINES ABOVE!)")
 
 This is my version of it.
-```
+```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperCode747/funky-autoplay/refs/heads/main/script.lua",true))()
 ```
