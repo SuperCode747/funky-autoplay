@@ -98,14 +98,14 @@ local IsMobile = false;
 local DevicePlatform = Enum.Platform.None;
 pcall(function() DevicePlatform = UserInputService:GetPlatform(); end);
 IsMobile = (DevicePlatform == Enum.Platform.Android or DevicePlatform == Enum.Platform.IOS);
-local UIRepo = 'https://raw.githubusercontent.com/SuperCode747/funky-friday-autoplay/main/'
+local UIRepo = 'https://raw.githubusercontent.com/SuperCode747/funky-friday-autoplay/main/UI-'
 local ScriptRepo = 'https://raw.githubusercontent.com/SuperCode747/funky-friday-autoplay/main/'
 
 local UI = nil
 if IsMobile then
-    UI = loadstring(game:HttpGet(UIRepo .. 'ui-mobileLibrary.lua'))()
+    UI = loadstring(game:HttpGet(UIRepo .. 'mobileLibrary.lua'))()
 else
-    UI = loadstring(game:HttpGet(UIRepo .. 'ui-library.lua'))()
+    UI = loadstring(game:HttpGet(UIRepo .. 'library.lua'))()
 end
 
 local metadata = {
