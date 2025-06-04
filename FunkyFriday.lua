@@ -4,14 +4,16 @@ print("Credits to salmsalm123 and 1xyzz")
 -- Funky Friday
 -- 1xyzz
 
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Fluent = loadstring(game:HttpGet("https://github.com/SuperCode747/Fluent-UI/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://github.com/SuperCode747/Fluent-UI/blob/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperCode747/Fluent-UI/refs/heads/master/Addons/InterfaceManager.lua"))()
 
 local gamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 
 local player = game:GetService("Players").LocalPlayer
 
 local Window = Fluent:CreateWindow({
-    Title = "Uni Hub  |",
+    Title = "Funky Hub  |",
     SubTitle = gamename,
     TabWidth = 130,
     Size = UDim2.fromOffset(490, 400),
@@ -231,7 +233,7 @@ Tabs.Updates:AddButton({
     Title = "Discord Server",
     Description = "Copies Discord Invite Link",
     Callback = function()
-        setclipboard("https://discord.gg/44PHnFKxq5")
+        --setclipboard("https://discord.gg/44PHnFKxq5")
         Fluent:Notify({Title = "Uni Hub", Content = "Copied Successfuly", Duration = 2})
     end
 })
@@ -239,7 +241,7 @@ Tabs.Updates:AddButton({
 Tabs.Updates:AddButton({
     Title = "Run Infinite Yield",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        --loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end
 })
 
