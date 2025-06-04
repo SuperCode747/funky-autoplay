@@ -5,7 +5,7 @@ print("Credits to salmsalm123 and 1xyzz")
 -- 1xyzz
 
 local Fluent = loadstring(game:HttpGet("https://github.com/SuperCode747/Fluent-UI/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://github.com/SuperCode747/Fluent-UI/blob/master/Addons/SaveManager.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperCode747/Fluent-UI/refs/heads/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperCode747/Fluent-UI/refs/heads/master/Addons/InterfaceManager.lua"))()
 
 local gamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
